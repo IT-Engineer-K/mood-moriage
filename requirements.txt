@@ -1,3 +1,6 @@
 flask
 transformers
+fugashi
+ipadic
 torch
+gunicorn
