@@ -5,3 +5,4 @@ ipadic
 gunicorn
 tensorflow
 torch
+asgiref
