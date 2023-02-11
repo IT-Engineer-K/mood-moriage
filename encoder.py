@@ -15,13 +15,13 @@ def encode(text):
         return_tensors = 'pt'
         )
     attention_mask = encoding['attention_mask']
-
+    
     #文章ベクトルを計算
     with torch.no_grad():
         output = bertModel(**encoding)
         last_hidden_state = output.last_hidden_state
         averaged_hidden_state =(last_hidden_state*attention_mask.unsqueeze(-1)).sum(1)/attention_mask.sum(1,keepdim=True) 
-    
+    return 'おとぼけダンス'
     sentence_vectors = []
     #文章ベクトルとラベルを追加
     sentence_vectors.append(averaged_hidden_state[0].cpu().numpy())
